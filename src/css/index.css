@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+.personagem {
+  width: 5%;
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+}
+.tela-do-jogo {
+  width: 100%;
+  height: 100vh;
+  background: url("../assets/img/space-background.jpg");
+  background-size: cover;
+}
+.parede {
+  background: url("../assets/img/space-black.jpg");
+  background-size: contain;
+  height: 12.5vh;
+}
+.paredes-laterais {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.espaçamento-tipo-1 > .parede {
+  width: 20%;
+}
+.espaçamento-tipo-2 > .parede {
+  width: 24%;
+}
+.espaçamento-tipo-3 > .parede {
+  width: 28%;
+}
+.espaçamento-tipo-4 > .parede {
+  width: 30%;
+}
+.espaçamento-tipo-5 > .parede {
+  width: 34%;
+}
+.espaçamento-tipo-6 > .parede {
+  width: 38%;
+}
+.espaçamento-tipo-7 > .parede {
+  width: 40%;
+}
+.espaçamento-tipo-8 > .parede {
+  width: 44%;
+}
