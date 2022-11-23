@@ -1,51 +1,249 @@
 body {
   margin: 0;
 }
+
 .personagem {
-  width: 5%;
+  height: 50px;
+  width: 70px;
   position: fixed;
   bottom: 0;
   right: 50%;
-  left: 50%;
+  background-image: url("../assets/svg/TG1-GSA.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
+
 .tela-do-jogo {
   width: 100%;
   height: 100vh;
   background: url("../assets/img/space-background.jpg");
   background-size: cover;
 }
+
+/*PARADES DO JOGO*/
 .parede {
   background: url("../assets/img/space-black.jpg");
   background-size: contain;
   height: 12.5vh;
 }
+
+/*CONJUNTO DE DUAS PAREDES LATERAIS*/
 .paredes-laterais {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
 }
-.espaçamento-tipo-1 > .parede {
-  width: 20%;
+
+/*CONJUNTO DE TRES PAREDES LATERAIS*/
+.paredes-triplas {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.espaçamento-tipo-2 > .parede {
-  width: 24%;
+
+/*PASSAGEM LIVRE*/
+.passagem-livre > .parede {
+  width: 42.5%;
 }
-.espaçamento-tipo-3 > .parede {
-  width: 28%;
+
+/*PASSAGEM LIVRE MAIOR PARA POSTO*/
+.passagem-livre-maior > .parede {
+  width: 7.4%;
 }
-.espaçamento-tipo-4 > .parede {
+
+/*PASSAGEM ZIG ZAG*/
+.passagem-zig-zag:nth-child(1) > .parede:first-child,
+.passagem-zig-zag:nth-child(1) > .parede:last-child,
+.passagem-zig-zag:nth-child(2) > .parede:first-child,
+.passagem-zig-zag:nth-child(3) > .parede:first-child,
+.passagem-zig-zag:nth-child(5) > .parede:first-child,
+.passagem-zig-zag:nth-child(6) > .parede:first-child,
+.passagem-zig-zag:nth-child(7) > .parede:first-child,
+.passagem-zig-zag:nth-child(7) > .parede:last-child,
+.passagem-zig-zag:nth-child(8) > .parede:last-child {
   width: 30%;
 }
-.espaçamento-tipo-5 > .parede {
-  width: 34%;
+.passagem-zig-zag:nth-child(2) > .parede:last-child,
+.passagem-zig-zag:nth-child(6) > .parede:last-child {
+  width: 55%;
 }
-.espaçamento-tipo-6 > .parede {
-  width: 38%;
+.passagem-zig-zag:nth-child(3) > .parede:last-child,
+.passagem-zig-zag:nth-child(4) > .parede:last-child,
+.passagem-zig-zag:nth-child(5) > .parede:last-child {
+  width: 35%;
 }
-.espaçamento-tipo-7 > .parede {
-  width: 40%;
+.passagem-zig-zag:nth-child(4) > .parede:first-child,
+.passagem-zig-zag:nth-child(8) > .parede:first-child {
+  width: 50%;
 }
-.espaçamento-tipo-8 > .parede {
-  width: 44%;
+
+/*PASSAGEM LIVRE A DIREITA*/
+.passagem-livre-direita:nth-child(1) > .parede:first-child {
+  width: 55%;
+}
+.passagem-livre-direita:nth-child(1) > .parede:last-child {
+  width: 30%;
+}
+.passagem-livre-direita:nth-child(2) > .parede:first-child {
+  width: 48.2%;
+}
+.passagem-livre-direita:nth-child(2) > .parede:last-child {
+  width: 36.8%;
+}
+.passagem-livre-direita:nth-child(3) > .parede:first-child {
+  width: 41.4%;
+}
+.passagem-livre-direita:nth-child(3) > .parede:last-child {
+  width: 43.6%;
+}
+.passagem-livre-direita:nth-child(4) > .parede:first-child {
+  width: 34.6%;
+}
+.passagem-livre-direita:nth-child(4) > .parede:last-child {
+  width: 50.4%;
+}
+.passagem-livre-direita:nth-child(5) > .parede:first-child {
+  width: 27.8%;
+}
+.passagem-livre-direita:nth-child(5) > .parede:last-child {
+  width: 57.2%;
+}
+.passagem-livre-direita:nth-child(6) > .parede:first-child {
+  width: 21%;
+}
+.passagem-livre-direita:nth-child(6) > .parede:last-child {
+  width: 64%;
+}
+.passagem-livre-direita:nth-child(7) > .parede:first-child {
+  width: 14.2%;
+}
+.passagem-livre-direita:nth-child(7) > .parede:last-child {
+  width: 70.8%;
+}
+.passagem-livre-direita:nth-child(8) > .parede:first-child {
+  width: 7.4%;
+}
+.passagem-livre-direita:nth-child(8) > .parede:last-child {
+  width: 77.6%;
+}
+
+/*PASSAGEM LIVRE A ESQUERDA*/
+.passagem-livre-esquerda:nth-child(8) > .parede:first-child {
+  width: 55%;
+}
+.passagem-livre-esquerda:nth-child(8) > .parede:last-child {
+  width: 30%;
+}
+.passagem-livre-esquerda:nth-child(7) > .parede:first-child {
+  width: 48.2%;
+}
+.passagem-livre-esquerda:nth-child(7) > .parede:last-child {
+  width: 36.8%;
+}
+.passagem-livre-esquerda:nth-child(6) > .parede:first-child {
+  width: 41.4%;
+}
+.passagem-livre-esquerda:nth-child(6) > .parede:last-child {
+  width: 43.6%;
+}
+.passagem-livre-esquerda:nth-child(5) > .parede:first-child {
+  width: 34.6%;
+}
+.passagem-livre-esquerda:nth-child(5) > .parede:last-child {
+  width: 50.4%;
+}
+.passagem-livre-esquerda:nth-child(4) > .parede:first-child {
+  width: 27.8%;
+}
+.passagem-livre-esquerda:nth-child(4) > .parede:last-child {
+  width: 57.2%;
+}
+.passagem-livre-esquerda:nth-child(3) > .parede:first-child {
+  width: 21%;
+}
+.passagem-livre-esquerda:nth-child(3) > .parede:last-child {
+  width: 64%;
+}
+.passagem-livre-esquerda:nth-child(2) > .parede:first-child {
+  width: 14.2%;
+}
+.passagem-livre-esquerda:nth-child(2) > .parede:last-child {
+  width: 70.8%;
+}
+.passagem-livre-esquerda:nth-child(1) > .parede:first-child {
+  width: 7.4%;
+}
+.passagem-livre-esquerda:nth-child(1) > .parede:last-child {
+  width: 77.6%;
+}
+
+/*PASSAGEM BIFURCADA*/
+.passagem-bifucada:nth-child(8) > .parede:first-child {
+  width: 42.5%;
+}
+.passagem-bifucada:nth-child(8) > .parede:last-child {
+  width: 42.5%;
+}
+.passagem-bifucada:nth-child(7) > .parede:first-child {
+  width: 35%;
+}
+.passagem-bifucada:nth-child(7) > .parede:last-child {
+  width: 35%;
+}
+.passagem-bifucada:nth-child(6) > .parede:first-child {
+  width: 27.5%;
+}
+.passagem-bifucada:nth-child(6) > .parede:nth-child(2) {
+  width: 15%;
+}
+.passagem-bifucada:nth-child(6) > .parede:last-child {
+  width: 27.5%;
+}
+.passagem-bifucada:nth-child(5) > .parede:first-child {
+  width: 20%;
+}
+.passagem-bifucada:nth-child(5) > .parede:nth-child(2) {
+  width: 30%;
+}
+.passagem-bifucada:nth-child(5) > .parede:last-child {
+  width: 20%;
+}
+.passagem-bifucada:nth-child(4) > .parede:first-child {
+  width: 14.8%;
+}
+.passagem-bifucada:nth-child(4) > .parede:nth-child(2) {
+  width: 45%;
+}
+.passagem-bifucada:nth-child(4) > .parede:last-child {
+  width: 14.8%;
+}
+.passagem-bifucada:nth-child(3) > .parede:first-child {
+  width: 14.8%;
+}
+.passagem-bifucada:nth-child(3) > .parede:nth-child(2) {
+  width: 45%;
+}
+.passagem-bifucada:nth-child(3) > .parede:last-child {
+  width: 14.8%;
+}
+.passagem-bifucada:nth-child(2) > .parede:first-child {
+  width: 7.4%;
+}
+.passagem-bifucada:nth-child(2) > .parede:nth-child(2) {
+  width: 55%;
+}
+.passagem-bifucada:nth-child(2) > .parede:last-child {
+  width: 7.4%;
+}
+.passagem-bifucada:nth-child(1) > .parede:first-child {
+  width: 7.4%;
+}
+.passagem-bifucada:nth-child(1) > .parede:nth-child(2) {
+  width: 55%;
+}
+.passagem-bifucada:nth-child(1) > .parede:last-child {
+  width: 7.4%;
 }
