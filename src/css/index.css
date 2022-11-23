@@ -36,14 +36,6 @@ body {
   flex-direction: row;
 }
 
-/*CONJUNTO DE TRES PAREDES LATERAIS*/
-.paredes-triplas {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 /*PASSAGEM LIVRE*/
 .passagem-livre > .parede {
   width: 42.5%;
