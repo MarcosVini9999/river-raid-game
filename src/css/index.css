@@ -2,19 +2,49 @@ body {
   margin: 0;
 }
 
-.personagem {
-  height: 50px;
-  width: 70px;
-  position: fixed;
+@keyframes grow {
+  0% {
+    --width: 0%;
+  }
+  12.5% {
+    --width: 0.925%;
+  }
+  25% {
+    --width: 1.85%;
+  }
+  37.5% {
+    --width: 2.775%;
+  }
+  50% {
+    --width: 3.7%;
+  }
+  62.5% {
+    --width: 4.625%;
+  }
+  75% {
+    --width: 5.55%;
+  }
+  87.5% {
+    --width: 6.475%;
+  }
+  100% {
+    --width: 7.4%;
+  }
+}
+
+#personagem {
+  position: absolute;
+  height: 5vh;
+  width: 5vw;
+  right: calc(50% - 2.5vw);
   bottom: 0;
-  right: 50%;
   background-image: url("../assets/svg/TG1-GSA.gif");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-.tela-do-jogo {
+#tela-do-jogo {
   width: 100%;
   height: 100vh;
   background: url("../assets/img/space-background.jpg");
@@ -26,6 +56,7 @@ body {
   background: url("../assets/img/space-black.jpg");
   background-size: contain;
   height: 12.5vh;
+  animation: grow 1s linear 1s both;
 }
 
 /*CONJUNTO DE DUAS PAREDES LATERAIS*/
@@ -37,13 +68,15 @@ body {
 }
 
 /*PASSAGEM LIVRE*/
-.passagem-livre > .parede {
-  width: 42.5%;
+.passagem-livre > .parede:first-child,
+.passagem-livre > .parede:last-child {
+  width: calc(var(--width) * 5.74);
 }
 
 /*PASSAGEM LIVRE MAIOR PARA POSTO*/
-.passagem-livre-maior > .parede {
-  width: 7.4%;
+.passagem-livre-maior > .parede:first-child,
+.passagem-livre-maior > .parede:last-child {
+  width: var(--width);
 }
 
 /*PASSAGEM ZIG ZAG*/
@@ -56,186 +89,186 @@ body {
 .passagem-zig-zag:nth-child(7) > .parede:first-child,
 .passagem-zig-zag:nth-child(7) > .parede:last-child,
 .passagem-zig-zag:nth-child(8) > .parede:last-child {
-  width: 30%;
+  width: calc(var(--width) * 4.05);
 }
 .passagem-zig-zag:nth-child(2) > .parede:last-child,
 .passagem-zig-zag:nth-child(6) > .parede:last-child {
-  width: 55%;
+  width: calc(var(--width) * 7.43);
 }
 .passagem-zig-zag:nth-child(3) > .parede:last-child,
 .passagem-zig-zag:nth-child(4) > .parede:last-child,
 .passagem-zig-zag:nth-child(5) > .parede:last-child {
-  width: 35%;
+  width: calc(var(--width) * 4.729);
 }
 .passagem-zig-zag:nth-child(4) > .parede:first-child,
 .passagem-zig-zag:nth-child(8) > .parede:first-child {
-  width: 50%;
+  width: calc(var(--width) * 7.1);
 }
 
 /*PASSAGEM LIVRE A DIREITA*/
 .passagem-livre-direita:nth-child(1) > .parede:first-child {
-  width: 55%;
+  width: calc(var(--width) * 7.43);
 }
 .passagem-livre-direita:nth-child(1) > .parede:last-child {
-  width: 30%;
+  width: calc(var(--width) * 4.05);
 }
 .passagem-livre-direita:nth-child(2) > .parede:first-child {
-  width: 48.2%;
+  width: calc(var(--width) * 6.513);
 }
 .passagem-livre-direita:nth-child(2) > .parede:last-child {
-  width: 36.8%;
+  width: calc(var(--width) * 4.97);
 }
 .passagem-livre-direita:nth-child(3) > .parede:first-child {
-  width: 41.4%;
+  width: calc(var(--width) * 5.594);
 }
 .passagem-livre-direita:nth-child(3) > .parede:last-child {
-  width: 43.6%;
+  width: calc(var(--width) * 5.89);
 }
 .passagem-livre-direita:nth-child(4) > .parede:first-child {
-  width: 34.6%;
+  width: calc(var(--width) * 4.675);
 }
 .passagem-livre-direita:nth-child(4) > .parede:last-child {
-  width: 50.4%;
+  width: calc(var(--width) * 6.81);
 }
 .passagem-livre-direita:nth-child(5) > .parede:first-child {
-  width: 27.8%;
+  width: calc(var(--width) * 3.756);
 }
 .passagem-livre-direita:nth-child(5) > .parede:last-child {
-  width: 57.2%;
+  width: calc(var(--width) * 7.729);
 }
 .passagem-livre-direita:nth-child(6) > .parede:first-child {
-  width: 21%;
+  width: calc(var(--width) * 2.837);
 }
 .passagem-livre-direita:nth-child(6) > .parede:last-child {
-  width: 64%;
+  width: calc(var(--width) * 8.648);
 }
 .passagem-livre-direita:nth-child(7) > .parede:first-child {
-  width: 14.2%;
+  width: calc(var(--width) * 1.918);
 }
 .passagem-livre-direita:nth-child(7) > .parede:last-child {
-  width: 70.8%;
+  width: calc(var(--width) * 9.567);
 }
 .passagem-livre-direita:nth-child(8) > .parede:first-child {
-  width: 7.4%;
+  width: var(--width);
 }
 .passagem-livre-direita:nth-child(8) > .parede:last-child {
-  width: 77.6%;
+  width: calc(var(--width) * 10.486);
 }
 
 /*PASSAGEM LIVRE A ESQUERDA*/
 .passagem-livre-esquerda:nth-child(8) > .parede:first-child {
-  width: 55%;
+  width: calc(var(--width) * 7.43);
 }
 .passagem-livre-esquerda:nth-child(8) > .parede:last-child {
-  width: 30%;
+  width: calc(var(--width) * 4.05);
 }
 .passagem-livre-esquerda:nth-child(7) > .parede:first-child {
-  width: 48.2%;
+  width: calc(var(--width) * 6.513);
 }
 .passagem-livre-esquerda:nth-child(7) > .parede:last-child {
-  width: 36.8%;
+  width: calc(var(--width) * 4.97);
 }
 .passagem-livre-esquerda:nth-child(6) > .parede:first-child {
-  width: 41.4%;
+  width: calc(var(--width) * 5.594);
 }
 .passagem-livre-esquerda:nth-child(6) > .parede:last-child {
-  width: 43.6%;
+  width: calc(var(--width) * 5.89);
 }
 .passagem-livre-esquerda:nth-child(5) > .parede:first-child {
-  width: 34.6%;
+  width: calc(var(--width) * 4.675);
 }
 .passagem-livre-esquerda:nth-child(5) > .parede:last-child {
-  width: 50.4%;
+  width: calc(var(--width) * 6.81);
 }
 .passagem-livre-esquerda:nth-child(4) > .parede:first-child {
-  width: 27.8%;
+  width: calc(var(--width) * 3.756);
 }
 .passagem-livre-esquerda:nth-child(4) > .parede:last-child {
-  width: 57.2%;
+  width: calc(var(--width) * 7.729);
 }
 .passagem-livre-esquerda:nth-child(3) > .parede:first-child {
-  width: 21%;
+  width: calc(var(--width) * 2.837);
 }
 .passagem-livre-esquerda:nth-child(3) > .parede:last-child {
-  width: 64%;
+  width: calc(var(--width) * 8.648);
 }
 .passagem-livre-esquerda:nth-child(2) > .parede:first-child {
-  width: 14.2%;
+  width: calc(var(--width) * 1.918);
 }
 .passagem-livre-esquerda:nth-child(2) > .parede:last-child {
-  width: 70.8%;
+  width: calc(var(--width) * 9.567);
 }
 .passagem-livre-esquerda:nth-child(1) > .parede:first-child {
-  width: 7.4%;
+  width: var(--width);
 }
 .passagem-livre-esquerda:nth-child(1) > .parede:last-child {
-  width: 77.6%;
+  width: calc(var(--width) * 10.486);
 }
 
 /*PASSAGEM BIFURCADA*/
 .passagem-bifucada:nth-child(8) > .parede:first-child {
-  width: 42.5%;
+  width: calc(var(--width) * 5.74);
 }
 .passagem-bifucada:nth-child(8) > .parede:last-child {
-  width: 42.5%;
+  width: calc(var(--width) * 5.74);
 }
 .passagem-bifucada:nth-child(7) > .parede:first-child {
-  width: 35%;
+  width: calc(var(--width) * 4.729);
 }
 .passagem-bifucada:nth-child(7) > .parede:last-child {
-  width: 35%;
+  width: calc(var(--width) * 4.729);
 }
 .passagem-bifucada:nth-child(6) > .parede:first-child {
-  width: 27.5%;
+  width: calc(var(--width) * 3.716);
 }
 .passagem-bifucada:nth-child(6) > .parede:nth-child(2) {
-  width: 15%;
+  width: calc(var(--width) * 2.027);
 }
 .passagem-bifucada:nth-child(6) > .parede:last-child {
-  width: 27.5%;
+  width: calc(var(--width) * 3.716);
 }
 .passagem-bifucada:nth-child(5) > .parede:first-child {
-  width: 20%;
+  width: calc(var(--width) * 2.702);
 }
 .passagem-bifucada:nth-child(5) > .parede:nth-child(2) {
-  width: 30%;
+  width: calc(var(--width) * 4.05);
 }
 .passagem-bifucada:nth-child(5) > .parede:last-child {
-  width: 20%;
+  width: calc(var(--width) * 2.702);
 }
 .passagem-bifucada:nth-child(4) > .parede:first-child {
-  width: 14.8%;
+  width: calc(var(--width) * 2);
 }
 .passagem-bifucada:nth-child(4) > .parede:nth-child(2) {
-  width: 45%;
+  width: calc(var(--width) * 6.08);
 }
 .passagem-bifucada:nth-child(4) > .parede:last-child {
-  width: 14.8%;
+  width: calc(var(--width) * 2);
 }
 .passagem-bifucada:nth-child(3) > .parede:first-child {
-  width: 14.8%;
+  width: calc(var(--width) * 2);
 }
 .passagem-bifucada:nth-child(3) > .parede:nth-child(2) {
-  width: 45%;
+  width: calc(var(--width) * 6.08);
 }
 .passagem-bifucada:nth-child(3) > .parede:last-child {
-  width: 14.8%;
+  width: calc(var(--width) * 2);
 }
 .passagem-bifucada:nth-child(2) > .parede:first-child {
-  width: 7.4%;
+  width: var(--width);
 }
 .passagem-bifucada:nth-child(2) > .parede:nth-child(2) {
-  width: 55%;
+  width: calc(var(--width) * 7.43);
 }
 .passagem-bifucada:nth-child(2) > .parede:last-child {
-  width: 7.4%;
+  width: var(--width);
 }
 .passagem-bifucada:nth-child(1) > .parede:first-child {
-  width: 7.4%;
+  width: var(--width);
 }
 .passagem-bifucada:nth-child(1) > .parede:nth-child(2) {
-  width: 55%;
+  width: calc(var(--width) * 7.43);
 }
 .passagem-bifucada:nth-child(1) > .parede:last-child {
-  width: 7.4%;
+  width: var(--width);
 }
