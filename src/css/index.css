@@ -1,35 +1,28 @@
+:root {
+  --width: 7.4%;
+}
+
 body {
   margin: 0;
 }
 
-@keyframes grow {
-  0% {
-    --width: 0%;
+@keyframes down {
+  from {
+    transform: translateY(-100%);
   }
-  12.5% {
-    --width: 0.925%;
+  to {
+    transform: translateY(100%);
   }
-  25% {
-    --width: 1.85%;
-  }
-  37.5% {
-    --width: 2.775%;
-  }
-  50% {
-    --width: 3.7%;
-  }
-  62.5% {
-    --width: 4.625%;
-  }
-  75% {
-    --width: 5.55%;
-  }
-  87.5% {
-    --width: 6.475%;
-  }
-  100% {
-    --width: 7.4%;
-  }
+}
+
+.caminho {
+  animation-name: down;
+  animation-duration: 20s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  transform: translateY(-100%);
+  position: fixed;
+  width: 100vw;
 }
 
 #personagem {
@@ -39,16 +32,20 @@ body {
   right: calc(50% - 2.5vw);
   bottom: 0;
   background-image: url("../assets/svg/TG1-GSA.gif");
-  background-repeat: no-repeat;
+  background-repeat: space;
   background-size: contain;
   background-position: center;
 }
 
 #tela-do-jogo {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: url("../assets/img/space-background.jpg");
   background-size: cover;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /*PARADES DO JOGO*/
@@ -56,11 +53,10 @@ body {
   background: url("../assets/img/space-black.jpg");
   background-size: contain;
   height: 12.5vh;
-  animation: grow 1s linear 1s both;
 }
 
 /*CONJUNTO DE DUAS PAREDES LATERAIS*/
-.paredes-laterais {
+.parede-lateral {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -88,7 +84,8 @@ body {
 .passagem-zig-zag:nth-child(6) > .parede:first-child,
 .passagem-zig-zag:nth-child(7) > .parede:first-child,
 .passagem-zig-zag:nth-child(7) > .parede:last-child,
-.passagem-zig-zag:nth-child(8) > .parede:last-child {
+.passagem-zig-zag:nth-child(8) > .parede:last-child,
+.passagem-zig-zag:nth-child(8) > .parede:first-child {
   width: calc(var(--width) * 4.05);
 }
 .passagem-zig-zag:nth-child(2) > .parede:last-child,
@@ -100,8 +97,7 @@ body {
 .passagem-zig-zag:nth-child(5) > .parede:last-child {
   width: calc(var(--width) * 4.729);
 }
-.passagem-zig-zag:nth-child(4) > .parede:first-child,
-.passagem-zig-zag:nth-child(8) > .parede:first-child {
+.passagem-zig-zag:nth-child(4) > .parede:first-child {
   width: calc(var(--width) * 7.1);
 }
 
@@ -220,9 +216,6 @@ body {
 }
 .passagem-bifurcada:nth-child(6) > .parede:first-child {
   width: calc(var(--width) * 3.716);
-}
-.passagem-bifurcada:nth-child(6) > .parede:nth-child(2) {
-  width: calc(var(--width) * 2.027);
 }
 .passagem-bifurcada:nth-child(6) > .parede:last-child {
   width: calc(var(--width) * 3.716);
