@@ -1,5 +1,5 @@
 :root {
-  --width: 7.4%;
+  --width: 5.4%;
 }
 
 body {
@@ -20,16 +20,15 @@ body {
   animation-duration: 20s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  transform: translateY(-100%);
   position: fixed;
   width: 100vw;
 }
 
 #personagem {
   position: absolute;
-  height: 5vh;
-  width: 5vw;
-  right: calc(50% - 2.5vw);
+  height: 10vh;
+  width: 10vw;
+  right: calc(50% - 5vw);
   bottom: 0;
   background-image: url("../assets/svg/TG1-GSA.gif");
   background-repeat: space;
