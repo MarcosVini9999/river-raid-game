@@ -25,18 +25,25 @@ const novoCaminho = passagem => {
   return caminho;
 };
 
+const removerUltimoCaminho = () => {
+  setTimeout(() => {
+    jogo.removeChild(jogo.lastChild);
+  }, 10000);
+};
+
 const inserirNovoCaminho = async caminhoAtual => {
-  const value = jogo.insertBefore(caminhoAtual, passagens[0]);
+  const valor = jogo.insertBefore(caminhoAtual, passagens[0]);
   await new Promise(resolve => {
     setTimeout(() => {
-      resolve(value);
-    }, 9750);
+      resolve(valor);
+    }, 9900);
   });
 };
 
 const paraPassagemLivre = async () => {
   const caminhoAtual = novoCaminho("passagem-livre");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [
     paraPassagemLivre,
     paraPassagemLivreMaior,
@@ -51,6 +58,7 @@ const paraPassagemLivre = async () => {
 const paraPassagemLivreMaior = async () => {
   const caminhoAtual = novoCaminho("passagem-livre-maior");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [
     paraPassagemLivre,
     paraPassagemLivreMaior,
@@ -67,6 +75,7 @@ const paraPassagemLivreMaior = async () => {
 const paraPassagemZigZag = async () => {
   const caminhoAtual = novoCaminho("passagem-zig-zag");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [
     paraPassagemLivre,
     paraPassagemLivreMaior,
@@ -81,6 +90,7 @@ const paraPassagemZigZag = async () => {
 const paraPassagemLivreDireita = async () => {
   const caminhoAtual = novoCaminho("passagem-livre-direita");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [paraPassagemLivreMaior, paraPassagemLivreEsquerda];
   const proximoCaminho =
     possiveisCaminhos[Math.floor(Math.random() * possiveisCaminhos.length)];
@@ -90,6 +100,7 @@ const paraPassagemLivreDireita = async () => {
 const paraPassagemLivreEsquerda = async () => {
   const caminhoAtual = novoCaminho("passagem-livre-esquerda");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [paraPassagemLivreMaior, paraPassagemLivreDireita];
   const proximoCaminho =
     possiveisCaminhos[Math.floor(Math.random() * possiveisCaminhos.length)];
@@ -99,6 +110,7 @@ const paraPassagemLivreEsquerda = async () => {
 const paraPassagemBifurcada = async () => {
   const caminhoAtual = novoCaminho("passagem-bifurcada");
   await inserirNovoCaminho(caminhoAtual);
+  removerUltimoCaminho();
   const possiveisCaminhos = [
     paraPassagemLivreMaior,
     paraPassagemLivreEsquerda,
