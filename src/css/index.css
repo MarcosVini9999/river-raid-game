@@ -147,53 +147,53 @@ body {
 }
 
 /*PASSAGEM LIVRE A ESQUERDA*/
-.passagem-livre-esquerda:nth-child(8) > .parede:first-child {
-  width: calc(var(--width) * 7.43);
-}
-.passagem-livre-esquerda:nth-child(8) > .parede:last-child {
+.passagem-livre-esquerda:nth-child(1) > .parede:first-child {
   width: calc(var(--width) * 4.05);
 }
-.passagem-livre-esquerda:nth-child(7) > .parede:first-child {
-  width: calc(var(--width) * 6.513);
-}
-.passagem-livre-esquerda:nth-child(7) > .parede:last-child {
-  width: calc(var(--width) * 4.97);
-}
-.passagem-livre-esquerda:nth-child(6) > .parede:first-child {
-  width: calc(var(--width) * 5.594);
-}
-.passagem-livre-esquerda:nth-child(6) > .parede:last-child {
-  width: calc(var(--width) * 5.89);
-}
-.passagem-livre-esquerda:nth-child(5) > .parede:first-child {
-  width: calc(var(--width) * 4.675);
-}
-.passagem-livre-esquerda:nth-child(5) > .parede:last-child {
-  width: calc(var(--width) * 6.81);
-}
-.passagem-livre-esquerda:nth-child(4) > .parede:first-child {
-  width: calc(var(--width) * 3.756);
-}
-.passagem-livre-esquerda:nth-child(4) > .parede:last-child {
-  width: calc(var(--width) * 7.729);
-}
-.passagem-livre-esquerda:nth-child(3) > .parede:first-child {
-  width: calc(var(--width) * 2.837);
-}
-.passagem-livre-esquerda:nth-child(3) > .parede:last-child {
-  width: calc(var(--width) * 8.648);
+.passagem-livre-esquerda:nth-child(1) > .parede:last-child {
+  width: calc(var(--width) * 7.43);
 }
 .passagem-livre-esquerda:nth-child(2) > .parede:first-child {
-  width: calc(var(--width) * 1.918);
+  width: calc(var(--width) * 4.97);
 }
 .passagem-livre-esquerda:nth-child(2) > .parede:last-child {
+  width: calc(var(--width) * 6.513);
+}
+.passagem-livre-esquerda:nth-child(3) > .parede:first-child {
+  width: calc(var(--width) * 5.89);
+}
+.passagem-livre-esquerda:nth-child(3) > .parede:last-child {
+  width: calc(var(--width) * 5.594);
+}
+.passagem-livre-esquerda:nth-child(4) > .parede:first-child {
+  width: calc(var(--width) * 6.81);
+}
+.passagem-livre-esquerda:nth-child(4) > .parede:last-child {
+  width: calc(var(--width) * 4.675);
+}
+.passagem-livre-esquerda:nth-child(5) > .parede:first-child {
+  width: calc(var(--width) * 7.729);
+}
+.passagem-livre-esquerda:nth-child(5) > .parede:last-child {
+  width: calc(var(--width) * 3.756);
+}
+.passagem-livre-esquerda:nth-child(6) > .parede:first-child {
+  width: calc(var(--width) * 8.648);
+}
+.passagem-livre-esquerda:nth-child(6) > .parede:last-child {
+  width: calc(var(--width) * 2.837);
+}
+.passagem-livre-esquerda:nth-child(7) > .parede:first-child {
   width: calc(var(--width) * 9.567);
 }
-.passagem-livre-esquerda:nth-child(1) > .parede:first-child {
-  width: var(--width);
+.passagem-livre-esquerda:nth-child(7) > .parede:last-child {
+  width: calc(var(--width) * 1.918);
 }
-.passagem-livre-esquerda:nth-child(1) > .parede:last-child {
+.passagem-livre-esquerda:nth-child(8) > .parede:first-child {
   width: calc(var(--width) * 10.486);
+}
+.passagem-livre-esquerda:nth-child(8) > .parede:last-child {
+  width: var(--width);
 }
 
 /*PASSAGEM BIFURCADA*/
