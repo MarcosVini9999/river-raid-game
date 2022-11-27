@@ -76,28 +76,24 @@ body {
 
 /*PASSAGEM ZIG ZAG*/
 .passagem-zig-zag:nth-child(1) > .parede:first-child,
-.passagem-zig-zag:nth-child(1) > .parede:last-child,
 .passagem-zig-zag:nth-child(2) > .parede:first-child,
 .passagem-zig-zag:nth-child(3) > .parede:first-child,
-.passagem-zig-zag:nth-child(5) > .parede:first-child,
-.passagem-zig-zag:nth-child(6) > .parede:first-child,
 .passagem-zig-zag:nth-child(7) > .parede:first-child,
 .passagem-zig-zag:nth-child(7) > .parede:last-child,
 .passagem-zig-zag:nth-child(8) > .parede:last-child,
-.passagem-zig-zag:nth-child(8) > .parede:first-child {
+.passagem-zig-zag:nth-child(8) > .parede:first-child,
+.passagem-zig-zag:nth-child(3) > .parede:last-child,
+.passagem-zig-zag:nth-child(4) > .parede:last-child,
+.passagem-zig-zag:nth-child(5) > .parede:last-child,
+.passagem-zig-zag:nth-child(6) > .parede:last-child,
+.passagem-zig-zag:nth-child(4) > .parede:first-child {
   width: calc(var(--width) * 4.05);
 }
 .passagem-zig-zag:nth-child(2) > .parede:last-child,
-.passagem-zig-zag:nth-child(6) > .parede:last-child {
-  width: calc(var(--width) * 7.43);
-}
-.passagem-zig-zag:nth-child(3) > .parede:last-child,
-.passagem-zig-zag:nth-child(4) > .parede:last-child,
-.passagem-zig-zag:nth-child(5) > .parede:last-child {
-  width: calc(var(--width) * 4.729);
-}
-.passagem-zig-zag:nth-child(4) > .parede:first-child {
-  width: calc(var(--width) * 7.1);
+.passagem-zig-zag:nth-child(1) > .parede:last-child,
+.passagem-zig-zag:nth-child(5) > .parede:first-child,
+.passagem-zig-zag:nth-child(6) > .parede:first-child {
+  width: calc(var(--width) * 10.43);
 }
 
 /*PASSAGEM LIVRE A DIREITA*/
