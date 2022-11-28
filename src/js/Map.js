@@ -17,7 +17,7 @@ const novaParedeLateral = passagem => {
 };
 
 const novoCaminho = passagem => {
-  const caminho = novoElemento("div", "caminho");
+  const caminho = novoElemento("div", "animacao");
   for (let i = 0; i < 8; i++) {
     const paredeLateral = novaParedeLateral(`${passagem}`);
     caminho.appendChild(paredeLateral);
