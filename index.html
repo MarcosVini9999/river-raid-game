@@ -23,9 +23,9 @@
       <div id="tela-de-baterias"></div>
       <div id="pontuação">
         <h1>Pontuação:</h1>
-        <p>x</p>
+        <p id="progresso-de-pontos">0</p>
       </div>
-      <div id="energia"><progress></progress>></div>
+      <progress id="energia" value="100" max="100"></progress>
     </main>
     <script>
       document.getElementById("trilha-sonora").volume = 0.4;
@@ -33,6 +33,7 @@
     <script type="text/javascript" src="./src/js/Map.js"></script>
     <script type="text/javascript" src="./src/js/PlayerController.js"></script>
     <script type="text/javascript" src="./src/js/Collision.js"></script>
+    <script type="text/javascript" src="./src/js/EnergyBar.js"></script>
     <script
       type="text/javascript"
       src="./src/js/RandomPositionItems.js"

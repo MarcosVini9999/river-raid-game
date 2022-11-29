@@ -36,6 +36,7 @@ const ColisaoDoPlayerComMoedas = () => {
     ) {
       document.getElementById("pontuacao").play();
       pontos++;
+      document.getElementById("progresso-de-pontos").innerHTML = pontos;
       moeda.parentNode.removeChild(moeda);
     }
   }
@@ -54,6 +55,9 @@ const ColisaoDoPlayerComBaterias = () => {
         personagem.getBoundingClientRect().top
     ) {
       document.getElementById("recarga").play();
+      if (document.getElementById("energia").value <= 100) {
+        document.getElementById("energia").value += 5;
+      }
       energia++;
       bateria.parentNode.removeChild(bateria);
     }

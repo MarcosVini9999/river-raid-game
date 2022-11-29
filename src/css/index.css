@@ -106,9 +106,6 @@ body {
 #energia {
   position: fixed;
   top: 0;
-}
-
-#energia progress {
   width: 100vw;
   -webkit-appearance: none;
   appearance: none;
