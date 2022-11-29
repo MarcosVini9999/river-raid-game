@@ -1,6 +1,10 @@
 const paredes = document.getElementsByClassName("parede");
+const moedas = document.getElementsByClassName("moeda");
+const baterias = document.getElementsByClassName("bateria");
+let pontos = 0;
+let energia = 0;
 
-const ouvinteColisao = () => {
+const ColisaoDoPlayerComParede = () => {
   for (const parede of paredes) {
     if (
       parede.getBoundingClientRect().width !== 0 &&
@@ -18,6 +22,51 @@ const ouvinteColisao = () => {
   }
 };
 
+const ColisaoDoPlayerComMoedas = () => {
+  for (const moeda of moedas) {
+    if (
+      moeda.getBoundingClientRect().left <
+        personagem.getBoundingClientRect().right &&
+      moeda.getBoundingClientRect().right >
+        personagem.getBoundingClientRect().left &&
+      moeda.getBoundingClientRect().top <
+        personagem.getBoundingClientRect().bottom &&
+      moeda.getBoundingClientRect().bottom >
+        personagem.getBoundingClientRect().top
+    ) {
+      pontos++;
+      moeda.parentNode.removeChild(moeda);
+    }
+  }
+};
+
+const ColisaoDoPlayerComBaterias = () => {
+  for (const bateria of baterias) {
+    if (
+      bateria.getBoundingClientRect().left <
+        personagem.getBoundingClientRect().right &&
+      bateria.getBoundingClientRect().right >
+        personagem.getBoundingClientRect().left &&
+      bateria.getBoundingClientRect().top <
+        personagem.getBoundingClientRect().bottom &&
+      bateria.getBoundingClientRect().bottom >
+        personagem.getBoundingClientRect().top
+    ) {
+      energia++;
+      bateria.parentNode.removeChild(bateria);
+      console.log(energia);
+    }
+  }
+};
+
 setInterval(() => {
-  ouvinteColisao();
+  ColisaoDoPlayerComParede();
+}, 500);
+
+setInterval(() => {
+  ColisaoDoPlayerComMoedas();
+}, 500);
+
+setInterval(() => {
+  ColisaoDoPlayerComBaterias();
 }, 500);
