@@ -12,7 +12,11 @@
       <audio
         src="./src/assets/mp3/Mirror Mind - Bobby Richards.mp3"
         autoplay
+        id="trilha-sonora"
       ></audio>
+      <audio id="recarga" src="./src/assets/mp3/pokemon-recovery.mp3"></audio>
+      <audio id="pontuacao" src="./src/assets/mp3/Beep-Short .mp3"></audio>
+
       <div id="tela-do-jogo"></div>
       <div id="personagem"></div>
       <div id="tela-de-moedas"></div>
@@ -23,6 +27,9 @@
       </div>
       <div id="energia"><progress></progress>></div>
     </main>
+    <script>
+      document.getElementById("trilha-sonora").volume = 0.4;
+    </script>
     <script type="text/javascript" src="./src/js/Map.js"></script>
     <script type="text/javascript" src="./src/js/PlayerController.js"></script>
     <script type="text/javascript" src="./src/js/Collision.js"></script>
