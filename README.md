@@ -6,8 +6,8 @@
 
 ## Controles no TECLADO (Somente para pc)
 
-- | <img src="https://user-images.githubusercontent.com/66041553/204817939-f34fa57b-f8d5-4c65-bf22-a2696ddfa1da.png" width="100px"></img> | para andar para a esquerda
-- | <img src="https://user-images.githubusercontent.com/66041553/204817724-cceb3f69-dd2e-489f-b5a5-145fbec2b409.png" width="100px"></img> | para andar para a direita
+-  <img src="https://user-images.githubusercontent.com/66041553/204817939-f34fa57b-f8d5-4c65-bf22-a2696ddfa1da.png" width="75px"></img>  para andar para a esquerda
+-  <img src="https://user-images.githubusercontent.com/66041553/204817724-cceb3f69-dd2e-489f-b5a5-145fbec2b409.png" width="75px"></img>  para andar para a direita
 
 ## Features
 
